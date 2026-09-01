@@ -1,19 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import FaultyTerminal from './FaultyTerminal';
 
 const AnimatedBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden bg-navy pointer-events-none">
-      {/* Grid overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px)`,
-          backgroundSize: '40px 40px',
-          transform: 'perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px)',
-          transformOrigin: 'top center'
-        }}
-      />
+      
+      {/* FaultyTerminal dynamic background */}
+      <div className="absolute inset-0 opacity-40">
+        <FaultyTerminal
+          scale={2.0}
+          gridMul={[3, 2]}
+          digitSize={1.1}
+          timeScale={0.4}
+          scanlineIntensity={0.8}
+          glitchAmount={1}
+          flickerAmount={0.8}
+          curvature={0.15}
+          tint="#6c38be"
+          brightness={0.3}
+        />
+      </div>
       
       {/* Animated glowing nodes */}
       <motion.div
