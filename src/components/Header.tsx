@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Globe, Menu, X } from 'lucide-react';
+import { Shield, Sparkles, Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,15 +10,15 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           
           {/* Logo / Left */}
-          <div className="flex items-center gap-2 flex-shrink-0">
+          <a href="#" className="flex items-center gap-2 flex-shrink-0 hover:opacity-90 transition-opacity">
             <Shield className="w-6 h-6 text-accent-blue" />
             <span className="font-bold text-lg md:text-xl text-white tracking-tight">
               Census Confidence Hub
             </span>
-          </div>
+          </a>
 
-          {/* Center / Journey Progress Tracker - Hidden on mobile */}
-          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
+          {/* Center / Journey Progress Tracker */}
+          <div className="hidden md:flex items-center gap-5 text-sm font-medium text-gray-400">
             <a href="#stage-1" className="hover:text-white transition-colors duration-200">
               Stage 1: Safety
             </a>
@@ -30,18 +30,19 @@ const Header: React.FC = () => {
             <a href="#stage-3" className="hover:text-white transition-colors duration-200">
               Stage 3: Get Ready
             </a>
+            <span className="text-gray-600">|</span>
+            <a
+              href="#ask-census-hub"
+              className="text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-200 flex items-center gap-1.5 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              Ask AI
+            </a>
           </div>
 
-          {/* Right / Language Toggle */}
-          <div className="hidden md:flex items-center gap-2 text-sm font-medium">
-            <Globe className="w-4 h-4 text-gray-400" />
-            <button className="text-white bg-white/10 px-3 py-1 rounded-full hover:bg-white/20 transition-colors">
-              English
-            </button>
-            <span className="text-gray-600">/</span>
-            <button className="text-gray-400 hover:text-white transition-colors">
-              हिंदी
-            </button>
+          {/* Right / Official Badge */}
+          <div className="hidden md:flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-full">
+            <span>✓ Verified Census Data</span>
           </div>
 
           {/* Mobile menu button */}
@@ -49,6 +50,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-300 hover:text-white p-2"
+              aria-label="Toggle Navigation Menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -63,12 +65,12 @@ const Header: React.FC = () => {
             <a href="#stage-1" onClick={() => setIsMobileMenuOpen(false)}>Stage 1: Safety</a>
             <a href="#stage-2" onClick={() => setIsMobileMenuOpen(false)}>Stage 2: Understand</a>
             <a href="#stage-3" onClick={() => setIsMobileMenuOpen(false)}>Stage 3: Get Ready</a>
+            <a href="#ask-census-hub" onClick={() => setIsMobileMenuOpen(false)} className="text-purple-400 font-bold flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4" /> Ask AI Assistant
+            </a>
           </div>
-          <div className="flex items-center gap-4 pt-4 border-t border-white/10">
-            <Globe className="w-4 h-4 text-gray-400" />
-            <span className="text-white font-medium text-sm">EN</span>
-            <span className="text-gray-600">|</span>
-            <span className="text-gray-400 text-sm">HI</span>
+          <div className="flex items-center gap-2 pt-3 border-t border-white/10 text-xs text-emerald-400 font-semibold">
+            <span>✓ Verified Census 2027 Data</span>
           </div>
         </div>
       )}

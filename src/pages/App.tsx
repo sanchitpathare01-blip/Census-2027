@@ -6,6 +6,7 @@ import Stage1Safety from '../components/Stage1Safety';
 import Stage2Understand from '../components/Stage2Understand';
 import Stage3GetReady from '../components/Stage3GetReady';
 import AskCensusHub from '../components/AskCensusHub';
+import Footer from '../components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -17,16 +18,17 @@ const App: React.FC = () => {
       <main className="relative z-10 flex flex-col w-full">
         <Hero />
         
-        <div className="flex flex-col gap-12 pb-32">
+        <div className="flex flex-col gap-12 pb-16">
           <Stage1Safety />
           <Stage2Understand />
           <Stage3GetReady />
           <AskCensusHub />
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };
 
 export default App;
-
