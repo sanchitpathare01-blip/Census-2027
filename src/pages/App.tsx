@@ -15,7 +15,7 @@ const App: React.FC = () => {
       
       <Header />
       
-      <main className="relative z-10 flex flex-col w-full">
+      <main id="main-content" className="relative z-10 flex flex-col w-full">
         <Hero />
         
         <div className="flex flex-col gap-12 pb-16">
