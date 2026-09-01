@@ -24,15 +24,21 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-accent-blue hover:bg-accent-blue/90 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(79,70,229,0.4)]">
+          <a
+            href="#ask-census-hub"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-accent-blue hover:bg-accent-blue/90 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(79,70,229,0.4)]"
+          >
             <span>Build My Confidence</span>
             <ArrowRight className="w-5 h-5" />
-          </button>
+          </a>
           
-          <button className="w-full sm:w-auto flex items-center justify-center gap-2 glass-card text-white font-medium px-8 py-4 rounded-xl hover:bg-white/10 transition-all duration-300">
+          <a
+            href="#stage-1"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 glass-card text-white font-medium px-8 py-4 rounded-xl hover:bg-white/10 transition-all duration-300"
+          >
             <MessageSquareWarning className="w-5 h-5 text-warning-orange" />
             <span>I just want to check a message</span>
-          </button>
+          </a>
         </div>
       </motion.div>
       
