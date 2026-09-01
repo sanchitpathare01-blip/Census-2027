@@ -1,4 +1,5 @@
-import { ScamPattern, ScamRiskLevel } from './types';
+import { ScamRiskLevel } from './types';
+import type { ScamPattern } from './types';
 
 export const SCAM_PATTERNS: ScamPattern[] = [
   {

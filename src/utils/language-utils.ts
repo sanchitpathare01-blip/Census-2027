@@ -1,4 +1,5 @@
-import { LanguageCode, SupportedLanguage } from '../data/types';
+import { LanguageCode } from '../data/types';
+import type { SupportedLanguage } from '../data/types';
 import { LANGUAGES } from '../data/languages';
 import { UI_TRANSLATIONS } from '../data/translations';
 

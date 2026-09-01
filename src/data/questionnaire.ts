@@ -1,4 +1,5 @@
-import { CensusQuestion, QuestionCategory } from './types';
+import type { CensusQuestion } from './types';
+import { QuestionCategory } from './types';
 import { OFFICIAL_SOURCES } from './official-sources';
 
 const hloSource = OFFICIAL_SOURCES.find(s => s.id === 'census-2027-hlo-gazette')!;

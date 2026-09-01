@@ -1,4 +1,4 @@
-import { PrivacyFact } from './types';
+import type { PrivacyFact } from './types';
 import { OFFICIAL_SOURCES } from './official-sources';
 
 export const PRIVACY_FACTS: PrivacyFact[] = [

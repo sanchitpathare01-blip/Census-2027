@@ -1,4 +1,5 @@
-import { MisinformationClaim, MisinformationVerdict } from './types';
+import { MisinformationVerdict } from './types';
+import type { MisinformationClaim } from './types';
 import { OFFICIAL_SOURCES } from './official-sources';
 
 export const MISINFORMATION_CLAIMS: MisinformationClaim[] = [

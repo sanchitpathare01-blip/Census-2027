@@ -1,4 +1,5 @@
-import { LanguageCode, Translations } from './types';
+import { LanguageCode } from './types';
+import type { Translations } from './types';
 
 export const UI_TRANSLATIONS: Translations = {
   'header.title': {
